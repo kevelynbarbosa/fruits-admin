@@ -1,0 +1,241 @@
+.navbar-vix {
+  background-color: $id-dark-blue;
+  height: 50px;
+  padding: 0 25px 0 15px;
+
+  button {
+    color: white;
+  }
+
+  a {
+    color: $white;
+    font-size: 0.8rem;
+    padding-top: 15px;
+  }
+
+  .session-expire {
+    color: $white;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    padding-right: 20px;
+    padding-top: 7px;
+    text-align: center;
+    b {
+      font-size: 0.8rem;
+    }
+  }
+
+  .item-notification {
+    height: 50px;
+
+    padding: 0 10px;
+    background: darken($id-dark-blue,7);
+    position: relative;
+
+    i {
+      font-size: 1.1rem;
+    }
+
+    span {
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 7px;
+      background-color: $orange;
+      color: $white;
+      font-size: $text-smallest * 1.1;
+      @include medium-text;
+      padding: 5px 3px;
+      text-align: center;
+      border-radius: 25px;
+      right: -5px;
+    }
+
+    @keyframes loader-animation {
+      0% {
+        left: -100%;
+      }
+      49% {
+        left: 100%;
+      }
+      50% {
+        left: 100%;
+      }
+      100% {
+        left: -100%;
+      }
+    }
+
+    .limit {
+      margin: 3px -10px -5px;
+      padding: 0;
+      overflow: hidden;
+      .loading-button {
+        height: 2px;
+        width: 100%;
+        position: relative;
+
+        .bar {
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          height: 2px;
+          background-color: white;
+          animation-name: loader-animation;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+          animation-timing-function: ease-in-out;
+        }
+      }
+    }
+  }
+
+  .nav-dropdown {
+    .dropdown-toggle {
+      border: none;
+      @include regular-text;
+      font-size: $text-small;
+      min-height: 50px;
+      margin-left: 20px;
+      background-color: transparent;
+      padding: 0;
+      &:focus {
+        outline: 0 !important;
+        box-shadow: none !important;
+        background-color: transparent;
+      }
+      &::after {
+        display: none !important;
+      }
+    }
+
+    .dropdown-menu {
+      position: relative;
+      text-align: right;
+      padding-bottom: 15px;
+
+      &::before {
+        display: inline-block;
+        position: absolute;
+        top: -8px;
+        right: 9px;
+        content: '';
+        border-top: 0;
+        border-right: 0.5em solid transparent;
+        border-bottom: 0.5em solid $white;
+        border-left: 0.5em solid transparent;
+      }
+      .dropdown-item {
+        // color: $gray;
+        display: inline-block !important;
+        width: auto !important;
+
+        &.btn-vix {
+          margin-top: 5px;
+          padding: 5px 10px;
+          color: $darkness-gray;
+          &:last-child {
+            margin-right: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.txt-avatar,
+.img-avatar {
+  display: block;
+  background-color: $blue;
+
+  font-size: $text-medium * 0.9;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 50%;
+  border: 2px solid $white;
+  color: $white;
+
+  width: 36px;
+  height: 36px;
+}
+
+.img-avatar {
+  padding: 0;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: row;
+
+  .info-image {
+    margin-right: 15px;
+    margin-left: -5px;
+    text-align: left;
+
+    .txt-avatar {
+      width: 64px;
+      height: 64px;
+      font-size: $text-big;
+      padding-top: 8px;
+      border-width: 3px;
+    }
+    .img-avatar {
+      width: 64px;
+      height: 64px;
+      border-width: 3px;
+    }
+  }
+  .info-name {
+    @include medium-text;
+    text-align: left;
+    // margin-top: 8px;
+  }
+  .info-enterprise {
+    @include medium-text;
+    text-transform: uppercase;
+    font-size: $text-small;
+    color: $darkness-gray;
+    text-align: left;
+    line-height: 1rem;
+    margin-top: 10px;
+  }
+  .info-centrocusto {
+    @include regular-text;
+    text-transform: uppercase;
+    font-size: $text-small;
+    color: $darkness-gray;
+    text-align: left;
+    line-height: 1rem;
+  }
+  .info-email {
+    @include regular-text;
+    font-size: $text-small;
+    line-height: $text-small * 1.2;
+    color: $gray;
+    text-align: left;
+  }
+}
+
+.bar-colors {
+  display: flex;
+  flex-direction: row;
+
+  div {
+    width: 25px;
+    height: 5px;
+    flex: 1;
+    &.green {
+      background-color: $id-green;
+    }
+    &.red {
+      background-color: $id-red;
+    }
+    &.orange {
+      background-color: $id-orange;
+    }
+    &.blue {
+      background-color: $id-dark-blue;
+    }
+  }
+}

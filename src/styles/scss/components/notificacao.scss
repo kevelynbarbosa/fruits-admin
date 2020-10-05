@@ -1,0 +1,114 @@
+.box-notifications {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0 0;
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+
+    &:nth-child(even) {
+      //   background-color: $lightness-gray;
+    }
+
+    .content {
+      padding: 0;
+      p {
+        @include regular-text;
+        font-size: $text-small;
+        line-height: $text-small * 1.4;
+        margin-bottom: 0;
+
+        &.title {
+          @include medium-text;
+        }
+
+        &.date-time {
+          color: $gray;
+          font-size: $text-smallest;
+          margin-bottom: 0;
+        }
+      }
+
+      &.not-read {
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          left: -20px;
+          height: 100%;
+          border-left: 5px solid $green-400;
+        }
+
+        .title {
+          @include medium-title;
+        }
+
+        .text {
+          @include medium-text;
+        }
+      }
+    }
+
+    .actions {
+      width: 25%;
+      text-align: right;
+      font-size: $text-small * 1.1;
+      align-self: center;
+
+      button {
+        text-align: center;
+        background: transparent;
+        border: none;
+        padding: 0;
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+
+        .fa-search {
+          color: $blue;
+        }
+
+        .fa-trash {
+          color: $red;
+        }
+
+        &:hover {
+          background: lighten($blue-100, 10);
+          border-radius: 5px;
+          .fa-search {
+            color: $blue;
+          }
+
+          .fa-trash {
+            color: $red;
+          }
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $light-gray;
+    }
+  }
+
+  .footer-notificacao {
+    background: $bg-light;
+    padding: 10px 20px 10px;
+    text-align: right;
+    border-radius: 0 0 5px 5px;
+    a {
+      color: $blue-700;
+      font-weight: 700;
+    }
+  }
+}
+
+.text-notificacao-popup {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}

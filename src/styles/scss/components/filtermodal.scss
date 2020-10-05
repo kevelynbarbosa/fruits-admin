@@ -1,0 +1,35 @@
+.filter-modal {
+  position: absolute;
+  top: 120px;
+  right: 25px;
+
+  width: 60%;
+  background-color: $white;
+  @extend .content-box;
+  box-shadow: 0px 15px 30px 10px rgba(0, 0, 0, 0.2);
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    // background-color: red;
+    right: 20px;
+    top: -10px;
+    border-bottom: 15px solid $white;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  &.notification {
+    top: 50px;
+    right: 72px;
+    z-index: 50;
+    width: 300px;
+  }
+}

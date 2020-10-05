@@ -1,0 +1,24 @@
+{
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "cwd": "babelrc",
+        "extensions": [".ts", ".tsx", ".js", ".ios.js", ".android.js"],
+        "root": ["."],
+        "alias": {
+          "components": "./src/components",
+          "contexts": "./src/contexts",
+          "interfaces": "./src/interfaces",
+          "pages": "./src/pages",
+          "routes": "./src/routes",
+          "services": "./src/services",
+          "store": "./src/store",
+          "styles": "./src/styles",
+          "config": "./src/config",
+          "hooks": "./src/hooks"
+        }
+      }
+    ]
+  ]
+}

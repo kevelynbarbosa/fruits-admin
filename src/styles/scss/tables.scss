@@ -1,0 +1,27 @@
+.table-documents {
+  font-size: 0.8rem;
+  border: 1px solid $light-gray;
+  border-top: none;
+  // margin: -10px 0 20px;
+  width: 100%;
+
+  th,
+  td {
+    padding: 5px 5px;
+  }
+
+  thead {
+    background-color: $bg-light;
+  }
+}
+
+.fWHyCt {
+  // width: calc(100% - 11px) !important;
+}
+
+.btn-acoes-rapidas {
+  margin-top: -13px !important;
+  font-size: 0.7rem;
+  width: 27px !important;
+  padding: 5px;
+}

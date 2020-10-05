@@ -1,0 +1,101 @@
+@mixin light-text {
+  font-family: 'helveticaNeue-lite', sans-serif;
+  letter-spacing: 0.05rem;
+}
+@mixin regular-text {
+  font-family: 'helveticaNeue-regular', sans-serif;
+  // letter-spacing: 0.05rem;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+@mixin medium-text {
+  font-family: 'helveticaNeue-medium', sans-serif;
+  // letter-spacing: 0.05rem;
+  text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+@mixin bold-text {
+  // font-family: 'helveticaNeue-bold', sans-serif;
+  letter-spacing: 0.05rem;
+}
+
+@mixin regular-title {
+  font-family: 'asap-regular', sans-serif;
+}
+@mixin medium-title {
+  font-family: 'asap-medium', sans-serif;
+}
+@mixin bold-title {
+  font-family: 'asap-bold', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  text-rendering: optimizeLegibility;
+  margin: 0;
+}
+
+h1 {
+  @include bold-title;
+  color: #1f2e67;
+  font-size: $text-bigger;
+  margin-bottom: 15px;
+}
+
+h2 {
+  @include medium-title;
+  color: $darkness-gray;
+  font-size: 1.8rem;
+}
+
+h3 {
+  @include medium-title;
+  color: $blue-gray-800;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+h4 {
+  @include regular-text;
+  color: $blue-gray-300;
+  font-size: 0.9rem;
+
+  i {
+    margin-right: 5px;
+    color: $blue-gray-400;
+    font-size: 1rem;
+  }
+}
+
+p {
+  @include regular-text;
+  color: $darkness-gray;
+  font-size: $text-default;
+  margin: 0;
+  line-height: $text-default * 1.5;
+}
+
+strong {
+  @include medium-text;
+}
+
+b {
+  @include medium-text;
+}
+
+.color-red {
+  color: $red;
+}
+.color-green {
+  color: $green-400;
+}
+.color-blue {
+  color: $blue-400;
+}
+.color-orange {
+  color: $orange-400;
+}
+
+.data-notificacao-modal {
+  margin-top: 10px;
+  @include medium-text;
+}

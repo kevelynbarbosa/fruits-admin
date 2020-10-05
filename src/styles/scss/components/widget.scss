@@ -1,0 +1,49 @@
+.widget {
+  background-color: $white;
+  border-radius: 10px;
+  box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.3), -9px -9px 16px rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+
+  &.no-shadow {
+    box-shadow: none;
+  }
+
+  .icon {
+    align-self: center;
+    padding-right: 15px;
+    i {
+      font-size: $text-bigger * 1.2;
+      //   color: $gray;
+    }
+  }
+
+  img {
+    width: 70px;
+  }
+
+  .text {
+    // align-self: center;
+  }
+
+  .label {
+    @include medium-text;
+    text-transform: uppercase;
+    font-size: $text-small * 0.9;
+  }
+  .subtitle {
+    @include regular-text;
+    font-size: $text-smallest;
+  }
+  .number {
+    @include medium-text;
+    font-size: $text-big * 0.9;
+    color: $blue-gray-500;
+    span {
+      font-size: $text-smallest;
+      color: $gray;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@font-face {
+  font-family: 'asap-bold';
+  src: url('../fonts/asap-bold-webfont.woff2') format('woff2'),
+       url('../fonts/asap-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'asap-medium';
+  src: url('../fonts/asap-medium-webfont.woff2') format('woff2'),
+       url('../fonts/asap-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'asap-regular';
+  src: url('../fonts/asap-regular-webfont.woff2') format('woff2'),
+       url('../fonts/asap-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'helveticaNeue-lite';
+  src: url('../fonts/HelveticaNeueLTCom-LtCn.woff2') format('woff2'),
+      url('../fonts/HelveticaNeueLTCom-LtCn.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'helveticaNeue-regular';
+  src: url('../fonts/HelveticaNeueLTCom-Cn.woff2') format('woff2'),
+      url('../fonts/HelveticaNeueLTCom-Cn.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'helveticaNeue-medium';
+  src: url('../fonts/HelveticaNeueLTCom-MdCn.woff2') format('woff2'),
+      url('../fonts/HelveticaNeueLTCom-MdCn.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'helveticaNeue-bold';
+  src: url('../fonts/HelveticaNeueLTCom-BdCn.woff2') format('woff2'),
+      url('../fonts/HelveticaNeueLTCom-BdCn.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+

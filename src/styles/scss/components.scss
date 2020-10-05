@@ -1,0 +1,374 @@
+.img-table-person {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  @extend .box-shadow;
+}
+
+.img-profile-user {
+  margin: 0 auto;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  position: relative;
+
+  &.square {
+    border-radius: 0;
+    width: 100%;
+    height: 360px;
+    img {
+      height: 360px;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .default-image {
+    background-color: $id-blue;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 30px;
+  }
+
+  //* File input para upload de imagens
+  .profile-img-upload {
+    visibility: hidden;
+    &::-webkit-file-upload-button {
+      visibility: hidden;
+    }
+    &::before {
+      content: 'Trocar foto';
+      position: absolute;
+      display: block;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      visibility: visible;
+
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 10px 0 15px;
+      outline: none;
+      white-space: nowrap;
+      -webkit-user-select: none;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 8pt;
+      color: $white;
+      text-transform: uppercase;
+    }
+    &:hover::before {
+      border-color: $id-blue;
+    }
+    &:active::before {
+      background-color: $id-blue;
+    }
+    &:focus:before {
+      background-color: $id-blue;
+    }
+  }
+}
+
+.breadcrumbs {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  margin-top: -10px;
+  margin-bottom: 15px;
+
+  li {
+    list-style: none;
+    display: flex;
+    font-size: $text-small;
+    color: $gray;
+
+    &:not(:last-child) {
+      &:after {
+        @include fontAwesomeSolid('\f105');
+        font-size: 0.6rem;
+        padding: 4px 5px 0;
+      }
+    }
+    a {
+      color: $id-blue;
+    }
+  }
+}
+
+.btn-acao-ponto {
+  background-color: $white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  > span {
+    text-align: left;
+  }
+
+  &:hover {
+    background-color: rgba($white, 0.3);
+  }
+
+  &.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  h4 {
+    color: $id-dark-blue;
+    @include medium-title;
+    font-size: $text-medium * 1.2;
+    margin-bottom: 0;
+  }
+
+  p {
+    color: $gray-600;
+    @include regular-text;
+    font-size: $text-small;
+  }
+}
+
+.btn-action-icon {
+  display: block;
+  background-color: $id-green;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  padding-top: 10px;
+  margin: 0 auto;
+
+  i {
+    background-color: $white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 6px;
+    font-size: 0.9rem;
+
+    &.fa-play {
+      padding-left: 3px;
+    }
+    &.fa-stop {
+      padding-left: 0.025rem;
+    }
+  }
+  &.green {
+    background-color: $id-green;
+    i {
+      color: $id-green;
+    }
+  }
+  &.red {
+    background-color: $red-600;
+    i {
+      color: $red-600;
+    }
+  }
+  &.red {
+    background-color: $red-600;
+    i {
+      color: $red-600;
+    }
+  }
+  &.orange {
+    background-color: $orange-600;
+    i {
+      color: $orange-600;
+    }
+  }
+}
+
+.content-box-ponto {
+  text-align: center;
+
+  .jouney-time {
+    color: $id-dark-blue;
+    margin-top: 25px;
+
+    .hour {
+      @include medium-title;
+      font-size: $text-big;
+      margin-bottom: 15px;
+      color: $id-dark-blue;
+    }
+
+    .status {
+      @include medium-text;
+      font-size: $text-medium;
+      color: $id-dark-blue;
+    }
+  }
+}
+
+.table-journey {
+  margin: 15px auto;
+  @include regular-text;
+  font-size: $text-default;
+
+  tr {
+    color: $gray-700;
+
+    &.pending {
+     color: $orange-600 !important;
+    }
+
+  td {
+    padding: 10px;
+
+    i {
+      color: $white;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      text-align: center;
+      padding-top: 7px;
+      background-color: $gray-500;
+      font-size: $text-small;
+
+      &.fa-play {
+        padding-left: 2px;
+      }
+      &.fa-stop {
+
+      }
+    }
+  }
+}
+
+
+}
+
+.table-card {
+  @include regular-text;
+  font-size: $text-small;
+  width: 100%;
+  // border: 1px solid $gray-100;
+
+  thead {
+    tr {
+      // background-color: $blue-gray-100 !important;
+      th {
+        padding: 3px 10px;
+      }
+    }
+  }
+
+  // tr:nth-child(odd) {
+  //   background-color: $gray-100;
+  // }
+
+  th:nth-child(even),
+  td:nth-child(even) {
+    text-align: center;
+  }
+
+  td {
+    padding: 3px 10px;
+    color: $gray-600;
+  }
+}
+
+.day-circle {
+  @include medium-text;
+  background-color: $gray-200;
+  display: inline-block;
+  padding: 9px;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+span {
+  //@include medium-text;
+  &.red {
+    color: $red-700;
+  }
+
+  &.green {
+    color: $green-600;
+  }
+}
+
+// Açoes rapidas das tabelas
+.dropdown.show {
+  overflow: visible !important;
+  position: relative;
+  zoom: 0.9;
+}
+#list-quick-actions {
+  margin-top: -20px;
+  width: 40px;
+  position: absolute;
+  &:after {
+    display: none;
+  }
+}
+
+// modal termos de uso
+.vertical-scroll-box {
+  max-height: 500px;
+  overflow-y: auto;
+  padding: 20px;
+  border: 1px solid $gray-500;
+  background-color: $bg-light;
+  border-radius: 5px;
+}
+
+.footer-termos {
+  padding: 20px 10px 10px;
+  .buttons-right {
+    text-align: right;
+  }
+}
+
+.crop-container {
+  height: 400px;
+  position: relative;
+}
+
+.modal-crop {
+  // height: 600px;
+}
+
+.marker-map {
+  color: $red-600;
+  font-size: 3rem;
+  position: relative;
+  i {
+    position: absolute;
+    top: -2.5rem;
+    left: -1.1rem;
+  }
+}
+
+.lida-naolida {
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  color: $blue-gray-700;
+}

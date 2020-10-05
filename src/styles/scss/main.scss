@@ -1,0 +1,46 @@
+// Não alterar este arquivo.
+// Os imports nao podem sofrer alterações em sua ordem
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import 'fonts';
+@import 'variables';
+@import 'colors';
+@import 'mixins';
+@import 'text';
+
+@import 'header';
+@import 'sidebar';
+@import 'containers';
+@import 'forms';
+@import 'components';
+@import 'login';
+@import 'components/index.scss';
+@import 'tables';
+@import 'components/notificacao';
+@import 'requisitos';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background-color: $bg-light;
+  color: $darkness-gray;
+  overflow-x: hidden;
+  font-size: 100%;
+  @include regular-text;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
+  // text-shadow: #fff 0px 1px 1px;
+  &:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+    background-color: transparent;
+  }
+}

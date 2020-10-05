@@ -1,0 +1,42 @@
+.tab-content {
+  background-color: $white;
+  padding: 20px;
+  border-left: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 20px;
+  border-radius: 0 0 5px 5px;
+
+  .box-footer {
+    padding: 10px 20px;
+    background-color: $lightness-gray;
+    border-top: 1px solid lighten($light-gray, 3);
+    border-radius: 0 0 5px 5px;
+    text-align: right;
+    margin: 20px -20px -20px;
+
+    &.right {
+      text-align: right;
+    }
+
+    &.left {
+      text-align: left;
+    }
+
+    &.center {
+      text-align: center;
+    }
+  }
+}
+
+.nav-tabs {
+  font-size: $text-small;
+  @include medium-title;
+
+  .nav-link {
+    color: $gray-600;
+    .active {
+      color: $darkness-gray !important;
+    }
+  }
+}

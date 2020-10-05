@@ -1,0 +1,52 @@
+.box-shadow-right {
+  box-shadow: 0 2px 10px 0 $gray;
+}
+
+.box-shadow-bottom {
+  box-shadow: 2px 0 10px 0 $gray;
+}
+
+.box-shadow {
+  box-shadow: 2px 1px 7px $light-gray;
+}
+
+@mixin fontAwesomeSolid($iconSheet) {
+  content: $iconSheet;
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+@mixin btn-hover($color) {
+  background-color: $color;
+  color: $white;
+}
+
+@mixin button-color($bg, $bg-hover, $color, $times: 0) {
+  background-color: lighten($bg, $times);
+
+  &:hover,
+  &.active {
+    @include btn-hover($bg-hover);
+    i {
+      color: $color;
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    color: $gray-500 !important;
+    background-color: $gray-300;
+    @include btn-hover($gray-300);
+    i {
+      color: $gray-500;
+    }
+  }
+
+  i {
+    color: $bg-hover;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

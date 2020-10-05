@@ -1,0 +1,130 @@
+.login-page {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background-color: $white;
+
+  h1 {
+    @include medium-text;
+  }
+
+  p {
+    @include regular-text;
+    color: $gray-600;
+    strong {
+      color: $gray-800;
+      font-size: $text-medium;
+    }
+  }
+
+  .img-logo {
+    width: 10rem;
+    margin-bottom: 5rem;
+    margin-top: 0rem;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-box-form {
+    background-color: $lightness-gray;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding: 5rem;
+
+    .absolute-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .box-buttons {
+      display: flex;
+      flex-direction: row;
+
+      .btn-vix {
+        width: 50%;
+
+        &.green {
+          background-color: $green;
+          color: $white;
+        }
+
+        &.transparent {
+          border: 1px solid $gray;
+        }
+      }
+    }
+  }
+
+  .login-box-image {
+    flex: 2;
+    padding: 3rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    background-color: #cddae3;
+    // background-image: url('../../styles/img/bg-login.jpg');
+    background-attachment: fixed;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: 500px 200px;
+
+    .bg-fade-login {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba($id-green, 0.2);
+      z-index: 0;
+    }
+
+    .video-login {
+      margin-bottom: 3rem;
+      z-index: 2;
+    }
+
+    .lead-login {
+      background-color: $white;
+      z-index: 1;
+      // padding: 3rem;
+      display: flex;
+      flex-direction: row;
+
+      .lead-img {
+        padding: 2rem;
+      }
+
+      .lead-text {
+        padding: 1rem 1.5rem;
+
+        h3 {
+          @include medium-title;
+          font-size: $text-medium;
+          margin-bottom: 15px;
+        }
+
+        p {
+          @include regular-text;
+          font-size: $text-default;
+        }
+      }
+    }
+  }
+
+  .link-recuperar {
+    text-align: center;
+
+    a {
+      color: $gray-600;
+      font-size: 0.8rem;
+    }
+  }
+}
